@@ -1,0 +1,306 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y PALETA DE COLORES - MISIÓN VERDE
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f9f1;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Encabezado Principal */
+header {
+    background: linear-gradient(135deg, #1e5631, #0dc57f);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+header h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Barra de Navegación */
+nav {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0dc57f;
+    color: white;
+}
+
+/* Secciones del Contenido */
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.principal {
+    text-align: center;
+    background: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 30px;
+}
+
+.principal h2 {
+    color: #1e5631;
+    margin-bottom: 15px;
+}
+
+.principal p {
+    font-size: 17px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    color: #555;
+}
+
+.principal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Tarjetas Informativas y Gráficos */
+.contenedor {
+    background-color: #e4eedc;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    padding: 30px 20px;
+}
+
+.contenedor h2 {
+    text-align: center;
+    color: #1e5631;
+    margin-bottom: 25px;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Tablas Estilizadas */
+table {
+    margin-top: 15px;
+    background: white;
+}
+
+th, td {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fbf7;
+}
+
+/* Contenedores fijados para los Canvas de Chart.js */
+.box-grafica {
+    position: relative;
+    height: 260px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   NUEVO: SECCIÓN DE FORMULARIOS (AQUÍ OCURRE LA MEJORA VISUAL DEL TEST)
+   ========================================================================== */
+.formulario {
+    background: #ffffff;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-top: 6px solid #4a93ae; /* Detalle de color azul del dashboard */
+    text-align: center;
+}
+
+.formulario h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.formulario p {
+    color: #7f8c8d;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* Contenedor Interno de los Elementos */
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Separación balanceada e idónea entre preguntas */
+    width: 100%;
+}
+
+/* Grupo de campos (Para vistas con estructuras tipo label + input) */
+.grupo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Enunciados Largos de las Preguntas */
+.formulario label {
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    color: #34495e; /* Tono oscuro moderno y súper legible */
+    margin-bottom: 6px;
+    font-size: 14.5px;
+    line-height: 1.5;
+}
+
+/* Homogeneizar Inputs de Texto, Números y Selectores */
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario select {
+    width: 100% !important; /* Fuerza simetría perfecta en todos los campos */
+    max-width: 100% !important;
+    padding: 12px 16px; /* Incremento de espacio interno para comodidad de lectura */
+    border: 1.5px solid #dcdde1;
+    border-radius: 8px; /* Esquinas suaves */
+    font-size: 15px;
+    color: #2f3640;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Transición animada suave al dar foco */
+}
+
+/* Estilo Premium para Cajas de Selección (<select>) */
+.formulario select {
+    cursor: pointer;
+    appearance: none; /* Quitamos la flecha gris rígida por defecto del sistema */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Inyección de una flecha vectorial minimalista limpia y personalizada */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234a93ae' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center; /* Ubicada a la derecha de forma balanceada */
+    background-size: 18px;
+    padding-right: 45px; /* Evita que los textos largos pisen la nueva flecha */
+}
+
+/* Efectos al Enfocar (Click en el campo) */
+.formulario input[type="text"]:focus,
+.formulario input[type="number"]:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: #4a93ae; /* Cambia al tono azul del dashboard */
+    box-shadow: 0 0 8px rgba(74, 147, 174, 0.25); /* Resplandor sutil */
+    background-color: #fbfdfe;
+}
+
+/* Botones de Envío / Cálculo del Algoritmo */
+.formulario button {
+    width: 100%;
+    background: linear-gradient(135deg, #4a93ae, #357a94);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(74, 147, 174, 0.2);
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.formulario button:hover {
+    background: linear-gradient(135deg, #357a94, #285e72);
+    box-shadow: 0 6px 12px rgba(74, 147, 174, 0.3);
+    transform: translateY(-1px);
+}
+
+.formulario button:active {
+    transform: translateY(1px);
+}
+
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}

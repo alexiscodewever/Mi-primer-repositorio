@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión Verde - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌍 Misión Verde 🌎</h1>
+        <h2>🌿 Pequeñas acciones hoy aseguran un futuro mañana 🌿</h2>
+        <h3>Bootcamp Talento TECH - Universidad de Caldas & MinTIC</h3>
+    </header>
+
+    <nav>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#importancia">Importancia</a>
+        <a href="estadisticas.html">Estadísticas e Innovación 📊</a>
+        <a href="index.html#test">Test de Hábitos</a>
+    </nav>
+
+    <section id="inicio" class="principal">
+        <h2>Bienvenidos</h2>
+        <p>
+            La ecología estudia la relación entre los seres vivos y el medio ambiente.
+            Cuidar la naturaleza ayuda a proteger la vida en nuestro planeta utilizando recursos limpios de manera consciente.
+        </p> 
+        <img src="1_himagen.jpg" alt="Naturaleza">
+    </section>
+
+    <section id="importancia" class="contenedor">
+        <h2>¿Por qué es importante cuidar el planeta?</h2>
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <img src="2_imagen.jpg" alt="Reciclaje">
+                <h3>Reciclaje</h3>
+                <p>Reciclar reduce la contaminación y ayuda al planeta.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="3_imagen.jpg" alt="Ahorro de agua">
+                <h3>Ahorro de Agua</h3>
+                <p>El agua es un recurso vital que debemos proteger.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="4_imagen.jpg" alt="Árboles">
+                <h3>Árboles</h3>
+                <p>Los árboles producen oxígeno y limpian el aire.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="test" class="formulario">
+        <h2>📋 Formulario de Evaluación de Hábitos (Hogar)</h2>
+        <p style="color: #40541b; font-weight: bold; margin-bottom: 15px;">Completa tus datos para analizar tu comportamiento ambiental</p>
+
+        <form id="formEcológico" onsubmit="event.preventDefault();">
+            <div class="grupo">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" required placeholder="Escribe tu nombre">
+            </div>
+            
+            <div class="grupo">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" required min="1" placeholder="Tu edad">
+            </div>
+
+            <div class="grupo">
+                <label for="recicla">¿Cuánto reciclas en casa?</label>
+                <select id="recicla" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="mucho">Mucho (Separo todos los residuos)</option>
+                    <option value="poco">Poco / A veces</option>
+                    <option value="nada">Nada</option>
+                </select>
+            </div>
+
+            <div class="grupo">
+                <label for="bano">¿Cuántos minutos tardas en la ducha normalmente?</label>
+                <input type="number" id="bano" required min="1" placeholder="Ej: 8">
+            </div>
+
+            <div class="grupo">
+                <label for="lavamanos">¿Cerras la llave al cepillarte los dientes o enjabonarte?</label>
+                <select id="lavamanos" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="si">Sí, siempre la cierro</option>
+                    <option value="no">No, la dejo corriendo</option>
+                </select>
+            </div>
+
+            <div class="grupo">
+                <label for="desconecta">¿Desconectas los cargadores y electrodomésticos que no usas?</label>
+                <select id="desconecta" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="si">Sí, siempre los desconecto</option>
+                    <option value="no">No, se quedan conectados</option>
+                </select>
+            </div>
+
+            <button type="button" style="margin-top: 25px;" onclick="evaluarHabitos()">Evaluar mis Hábitos</button>
+        </form>
+
+        <div id="resultado" style="display: none; width: 100%; max-width: 500px; margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center;"></div>
+    </section>
+
+    <footer>
+        <p>© Bootcamp Talento TECH 2026 - Equipo Misión Verde</p>
+    </footer>
+
+    <script src="ejemploJs.js"></script>
+</body>
+</html>
